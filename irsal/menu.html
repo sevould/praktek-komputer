@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cafe Justitia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Cinzel', serif; }
+    </style>
+</head>
+<body class="bg-[#1a110b] text-[#f5efe6]">
+
+    <!-- NAVBAR -->
+    <nav class="bg-[#1a110b] border-b-2 border-[#d4af37] sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-serif text-[#d4af37] text-2xl font-bold tracking-widest">CAFE JUSTITIA</a>
+            <div class="flex space-x-8 text-sm font-semibold uppercase tracking-wider text-[#f5efe6]">
+                <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+                <a href="about.html" class="hover:text-[#d4af37] transition">About</a>
+                <a href="menu.html" class="text-[#d4af37] border-b border-[#d4af37]">Menu</a>
+                <a href="contact.html" class="hover:text-[#d4af37] transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT MENU -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-4xl text-[#d4af37] font-bold tracking-wide">DAFTAR MENU</h2>
+            <p class="text-gray-400 mt-2 text-sm uppercase tracking-widest">Kombinasi Sempurna Hukum & Cita Rasa</p>
+        </div>
+
+        <!-- FILTER TABS -->
+        <div class="flex justify-center space-x-4 mb-12">
+            <button onclick="filterMenu('all')" class="tab-btn bg-[#d4af37] text-[#1a110b] px-6 py-2 text-sm font-bold uppercase tracking-wider transition">All</button>
+            <button onclick="filterMenu('coffee')" class="tab-btn border border-[#d4af37]/30 text-gray-400 hover:text-[#d4af37] px-6 py-2 text-sm font-bold uppercase tracking-wider transition">Coffee</button>
+            <button onclick="filterMenu('food')" class="tab-btn border border-[#d4af37]/30 text-gray-400 hover:text-[#d4af37] px-6 py-2 text-sm font-bold uppercase tracking-wider transition">Food</button>
+        </div>
+
+        <!-- MENU GRID -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="menu-card bg-[#2c1e15] p-6 border border-[#d4af37]/10 rounded hover:border-[#d4af37] transition duration-300" data-category="coffee">
+                <div class="flex justify-between items-baseline border-b border-gray-700 pb-2 mb-3">
+                    <h4 class="font-serif text-[#f3e5ab] text-lg font-bold">Espresso Justitia</h4>
+                    <span class="text-[#d4af37] font-bold text-sm">Rp 28k</span>
+                </div>
+                <p class="text-gray-400 text-xs font-light">Ekstraksi pekat arabika murni. Tegas dan adil tanpa kompromi.</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="menu-card bg-[#2c1e15] p-6 border border-[#d4af37]/10 rounded hover:border-[#d4af37] transition duration-300" data-category="coffee">
+                <div class="flex justify-between items-baseline border-b border-gray-700 pb-2 mb-3">
+                    <h4 class="font-serif text-[#f3e5ab] text-lg font-bold">Law & Order Latte</h4>
+                    <span class="text-[#d4af37] font-bold text-sm">Rp 35k</span>
+                </div>
+                <p class="text-gray-400 text-xs font-light">Perpaduan espresso dan susu lembut yang terstruktur dengan sempurna.</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="menu-card bg-[#2c1e15] p-6 border border-[#d4af37]/10 rounded hover:border-[#d4af37] transition duration-300" data-category="coffee">
+                <div class="flex justify-between items-baseline border-b border-gray-700 pb-2 mb-3">
+                    <h4 class="font-serif text-[#f3e5ab] text-lg font-bold">The Subpoena Cold Brew</h4>
+                    <span class="text-[#d4af37] font-bold text-sm">Rp 38k</span>
+                </div>
+                <p class="text-gray-400 text-xs font-light">Diseduh dingin selama 16 jam. Memberikan efek keadilan yang segar.</p>
+            </div>
+            <!-- Item 4 -->
+            <div class="menu-card bg-[#2c1e15] p-6 border border-[#d4af37]/10 rounded hover:border-[#d4af37] transition duration-300" data-category="food">
+                <div class="flex justify-between items-baseline border-b border-gray-700 pb-2 mb-3">
+                    <h4 class="font-serif text-[#f3e5ab] text-lg font-bold">Croissant Verdict</h4>
+                    <span class="text-[#d4af37] font-bold text-sm">Rp 30k</span>
+                </div>
+                <p class="text-gray-400 text-xs font-light">Pastry mentega berlapis yang renyah. Keputusan mutlak terbaik.</p>
+            </div>
+            <!-- Item 5 -->
+            <div class="menu-card bg-[#2c1e15] p-6 border border-[#d4af37]/10 rounded hover:border-[#d4af37] transition duration-300" data-category="food">
+                <div class="flex justify-between items-baseline border-b border-gray-700 pb-2 mb-3">
+                    <h4 class="font-serif text-[#f3e5ab] text-lg font-bold">Subpoena Sandwich</h4>
+                    <span class="text-[#d4af37] font-bold text-sm">Rp 45k</span>
+                </div>
+                <p class="text-gray-400 text-xs font-light">Roti panggang isi daging asap dan keju lumer. Siap memanggil rasa lapar Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT FOR FILTERING -->
+    <script>
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('.menu-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            // Update Active Button Style
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.className = "tab-btn border border-[#d4af37]/30 text-gray-400 hover:text-[#d4af37] px-6 py-2 text-sm font-bold uppercase tracking-wider transition";
+            });
+            event.currentTarget.className = "tab-btn bg-[#d4af37] text-[#1a110b] px-6 py-2 text-sm font-bold uppercase tracking-wider transition";
+        }
+    </script>
+</body>
+</html>

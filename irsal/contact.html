@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Reservation - Cafe Justitia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Cinzel', serif; }
+    </style>
+</head>
+<body class="bg-[#fdfbf7] text-[#2c1e15]">
+
+    <!-- NAVBAR -->
+    <nav class="bg-[#1a110b] border-b-2 border-[#d4af37] sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-serif text-[#d4af37] text-2xl font-bold tracking-widest">CAFE JUSTITIA</a>
+            <div class="flex space-x-8 text-sm font-semibold uppercase tracking-wider text-[#f5efe6]">
+                <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+                <a href="about.html" class="hover:text-[#d4af37] transition">About</a>
+                <a href="menu.html" class="hover:text-[#d4af37] transition">Menu</a>
+                <a href="contact.html" class="text-[#d4af37] border-b border-[#d4af37]">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT CONTACT -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Info & Hours -->
+            <div class="space-y-8">
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-[#1a110b] mb-2">HUBUNGI KAMI</h2>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest">Amankan Meja Diskusi Anda</p>
+                </div>
+                
+                <div class="space-y-4 text-gray-700 font-light">
+                    <p class="flex items-center gap-3">📍 <span class="font-normal">Jl. Mahkamah Agung No. 12, Jakarta Pusat</span></p>
+                    <p class="flex items-center gap-3">📞 <span class="font-normal">+62 812-3456-7890</span></p>
+                    <p class="flex items-center gap-3">✉️ <span class="font-normal">info@cafejustitia.com</span></p>
+                </div>
+
+                <div class="bg-[#1a110b] text-[#f5efe6] p-6 border-l-4 border-[#d4af37]">
+                    <h4 class="font-serif text-[#d4af37] font-bold text-lg mb-2">Jam Operasional</h4>
+                    <p class="text-sm font-light text-gray-300">Senin - Jumat: 09.00 - 22.00 WIB</p>
+                    <p class="text-sm font-light text-gray-300 mt-1">Sabtu - Minggu: 10.00 - 23.00 WIB</p>
+                </div>
+            </div>
+
+            <!-- Booking/Contact Form -->
+            <div class="bg-white p-8 rounded shadow-lg border border-gray-100">
+                <h3 class="font-serif text-xl font-bold mb-6 text-[#1a110b] border-b pb-2 border-gray-100">Formulir Reservasi</h3>
+                <form class="space-y-4" onsubmit="alert('Terima kasih! Reservasi Anda telah diajukan ke Cafe Justitia.'); return false;">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Nama Lengkap</label>
+                        <input type="text" required class="w-full border-gray-200 border p-2.5 rounded focus:outline-none focus:border-[#d4af37]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Jumlah Tamu</label>
+                        <input type="number" min="1" required class="w-full border-gray-200 border p-2.5 rounded focus:outline-none focus:border-[#d4af37]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Catatan Khusus (Opsional)</label>
+                        <textarea rows="3" class="w-full border-gray-200 border p-2.5 rounded focus:outline-none focus:border-[#d4af37]" placeholder="Contoh: Butuh meja dekat rak buku hukum..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#1a110b] text-[#d4af37] hover:bg-[#d4af37] hover:text-[#1a110b] py-3 text-xs font-bold uppercase tracking-wider transition duration-300">Ajukan Reservasi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
